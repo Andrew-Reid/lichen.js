@@ -438,13 +438,57 @@ If a color is provided, sets the stroke color of the pattern. If not provided, r
 
 **cairo.strokeWidth(width)**
 
-If a width is provided, sets the stroke width to the specified number, in pixels. If not provided, returns the current value. Defaults to 0.
+If a width is provided, sets the stroke width to the specified number, in pixels. If not provided, returns the current value. Defaults to 1.
 
 **cairo.use()**
 
 Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
 
 `rect.attr("fill",cairo.use());`
+
+
+### ln.octagon()
+
+Creates a new octagon (and square) pattern
+
+`var octagon = ln.octagon();`
+
+
+**octagon.add()**
+
+Adds the octagon pattern to the DOM. Invoked on creation and with `octagon.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+
+**octagon.angle(angle)**
+
+Takes an angle in degrees and rotates the pattern by that amount. If not provided, returns the current value. Defaults to 0.
+
+**octagon.fill([colors])**
+
+Requires an array of two colors, first color sets the octagon's fill, the second fills the square. If no array is provided, returns the current values. Defaults to `["steelblue","white"]`.
+
+**octagon.lengh(length)**
+
+Sets width of the octagon. Defaults to 32.
+
+**octagon.stroke(color)**
+
+If a color is provided, sets the stroke color of the pattern. If not provided, returns the current value. Defaults to black.
+
+**octagon.strokeWidth(width)**
+
+If a width is provided, sets the stroke width to the specified number, in pixels. If not provided, returns the current value. Defaults to 1.
+
+**octagon.use()**
+
+Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
+
+`rect.attr("fill",octagon.use());`
+
+
+
+
+
+
 
 
 
