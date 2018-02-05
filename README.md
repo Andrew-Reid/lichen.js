@@ -222,4 +222,64 @@ Returns a string containing the location of the pattern. Can be used to set the 
 `rect.attr("fill",text.use());`
 
 
+### ln.symbol()
+
+Creates a new pattern with tiled symbols:
+
+`var symbol = ln.symbol();`
+
+**symbol.add()**
+
+Adds the symbol pattern to the DOM. Invoked on creation and with `symbol.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+
+**symbol.angle(angle)**
+
+Takes an angle in degrees and rotates the pattern by that amount. If not provided, returns the current value. Defaults to 0.
+
+**symbol.background(color)**
+
+Takes a color (including "none") to set the background color of the pattern. If not provided, returns the current value. Defaults to "none".
+
+**symbol.center([x,y])**
+
+If a coordinate is provided, centers the symbol at this value. While d3 symbols are centered at [0,0], this is intended for use where [0,0] forms the top left corner of the symbol as opposed to the center. If a coordinate is not provided returns the current centering coordiante, which is [0,0] by default.
+
+**symbol.fill(color)**
+
+Takes a color to set the fill of the pattern's shapes. If not provided returns the current value. Defaults to "steelblue".
+
+**symbol.hex(hex)**
+
+If true, returns a hexagonal grid, if false, returns a square grid. If not provided, returns current value. Defaults to true.
+
+**symbol.opacity(opacity)**
+
+Sets the opacity of the pattern symbol. 0 is completely transparent, 1 is completely opaque. If not provided, returns the current opacity value. Defaults to 1.
+
+**symbol.scale(k)**
+
+If k is provided, sets the scaling factor of the symbol. If not provided, returns the current scale. Defaults to 1.
+
+**symbol.spacing(spacing)**
+
+If spacing is provided, sets the distance between the centroid of adjacent tiles - does not factor in the bbox of the symbol. If not provided, returns the current spacing.
+
+**symbol.stroke(color)**
+
+If a color is provided, sets the stroke color of the pattern. If not provided, returns the current value. Defaults to black.
+
+**symbol.strokeWidth(width)**
+
+If a width is provided, sets the strokew width to the specified number, in pixels. If not provided, returns the current value. Defaults to 0.
+
+**symbol.symbol(symbol)**
+
+If a symbol is provided sets the symbol in used in the pattern. If a symbol is not provided, returns the current pattern, which defaults to `d3.symbol().type(D3.symbolWye).size(100)`. Can take a d3 symbol or a path.
+
+**symbol.use()**
+
+Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
+
+`rect.attr("fill",symbol.use());`
+
 
