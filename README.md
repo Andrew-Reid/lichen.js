@@ -270,7 +270,7 @@ If a color is provided, sets the stroke color of the pattern. If not provided, r
 
 **symbol.strokeWidth(width)**
 
-If a width is provided, sets the strokew width to the specified number, in pixels. If not provided, returns the current value. Defaults to 0.
+If a width is provided, sets the stroke width to the specified number, in pixels. If not provided, returns the current value. Defaults to 0.
 
 **symbol.symbol(symbol)**
 
@@ -281,5 +281,51 @@ If a symbol is provided sets the symbol in used in the pattern. If a symbol is n
 Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
 
 `rect.attr("fill",symbol.use());`
+
+
+### ln.checker()
+
+Creates a new checkered pattern
+
+`var checker = ln.checker();`
+
+**checker.add()**
+
+Adds the checker pattern to the DOM. Invoked on creation and with `checker.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+
+**checker.angle(angle)**
+
+Takes an angle in degrees and rotates the pattern by that amount. If not provided, returns the current value. Defaults to 45.
+
+**checker.fill([color1,color2])**
+
+If an array of colors is provided, sets the two colors of the tiles. If not provided returns the current value. Defaults to ["steelblue","white"]
+
+**checker.opacity(opacity)**
+
+Sets the opacity of the pattern checker. 0 is completely transparent, 1 is completely opaque. If not provided, returns the current opacity value. Defaults to 1.
+
+**checker.stroke(color)**
+
+If a color is provided, sets the stroke color of the pattern. If not provided, returns the current value. Defaults to black.
+
+**checker.strokeWidth(width)**
+
+If a width is provided, sets the strokew width to the specified number, in pixels. If not provided, returns the current value. Defaults to 0.
+
+**checker.use()**
+
+Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
+
+`rect.attr("fill",checker.use());`
+
+**checker.width(width)**
+
+If width is provided, sets the edge length of each checker tile, in pixels. If not provided, returns the current value. Defaults to 10.
+
+
+
+
+
 
 
