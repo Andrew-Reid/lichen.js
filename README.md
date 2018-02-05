@@ -299,7 +299,9 @@ Takes an angle in degrees and rotates the pattern by that amount. If not provide
 
 **checker.fill([color1,color2])**
 
-If an array of colors is provided, sets the two colors of the tiles. If not provided returns the current value. Defaults to ["steelblue","white"]
+If an array of colors is provided, sets the two colors of the tiles. If not provided returns the current value. Defaults to `["steelblue","white"]`. 
+
+If only one color is provided (in an array or not), the pattern will add white as a second color.
 
 **checker.opacity(opacity)**
 
@@ -322,6 +324,131 @@ Returns a string containing the location of the pattern. Can be used to set the 
 **checker.width(width)**
 
 If width is provided, sets the edge length of each checker tile, in pixels. If not provided, returns the current value. Defaults to 10.
+
+### ln.stripe()
+
+Creates a new striped pattern
+
+`var stripe = ln.stripe();`
+
+**stripe.add()**
+
+Adds the stripe pattern to the DOM. Invoked on creation and with `stripe.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+
+**stripe.angle(angle)**
+
+Takes an angle in degrees and rotates the pattern by that amount. If not provided, returns the current value. Defaults to 45.
+
+**stripe.fill([colors])**
+
+Takes an array of n colors. The number of color determines the number of unique stripes. If not provided, returns the current value. Defaults to `["steelblue","white"]`. 
+
+If only one color is provided (either in an array or not), the pattern will add white as a second color.
+
+**stripe.opacity([opacities])**
+
+Takes an array (or single value) of opacities. Does not need to be the same length as the colors array - opacities will be recycled if there are less opacities than colors. If only one value is provided, sets the opacity of all strokes.
+
+If opacities are not provided, returns the current opacity values, defaults to `[1]`.
+
+**stripe.use()**
+
+Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
+
+`rect.attr("fill",stripe.use());`
+
+**stripe.width([widths])**
+
+Takes an array (or single value) of stripe widths. Does not need to be the same length as the colors array - widths will be recycled if there are less widths than colors. If only one value is provided, sets the width of all strokes. 
+
+If widths are not provided, returns current widths, defaults to `[10]`.
+
+
+### ln.plaid()
+
+Creates a new plaid pattern
+
+`var plaid = ln.plaid();`
+
+**plaid.add()**
+
+Adds the plaid pattern to the DOM. Invoked on creation and with `plaid.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+
+**plaid.angle(angle)**
+
+Takes an angle in degrees and rotates the pattern by that amount. If not provided, returns the current value. Defaults to 45.
+
+**plaid.fill([[colorsX],[colorsY]])**
+
+Designed to take an array containing two arrays of colors. One array will set the stripes for one the x axis, while the other will set the stripes for the y axis. 
+
+If only one colors array is provided, it will be duplicated for each axis.
+
+If no array is provided, returns the current value. Defaults to `[["crimson","red"],["steelblue","white"]]`.
+
+**plaid.opacity([[opacitiesX],[opacitiesY]])**
+
+Designed to take an array containing two arrays of opacities. One array will set the stripe opacities for one the x axis, while the other will set the stripe opacities for the y axis. 
+
+If only one opacities array is provided, it will be duplicated for each axis.
+
+If a single value is provided it will be used for all stripes.
+
+If no array is provided, returns the current value. Defaults to `[[0.5,0.8],[0.6,0.4]]`
+
+
+**plaid.use()**
+
+Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
+
+`rect.attr("fill",plaid.use());`
+
+**plaid.width([widths])**
+
+Designed to take an array containing two arrays of widths. One array will set the stripe widths for one the x axis, while the other will set the stripe widths for the y axis. 
+
+If only one opacities array is provided, it will be duplicated for each axis.
+
+If a single value is provided it will be used for all stripes.
+
+If no array is provided, returns the current value. Defaults to `[[10,5],[12,6]]`
+
+
+### ln.cairo()
+
+Creates a new cairo pentagonal pattern
+
+`var cairo = ln.cairo();`
+
+**cairo.add()**
+
+Adds the cairo pattern to the DOM. Invoked on creation and with `cairo.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+
+**cairo.angle(angle)**
+
+Takes an angle in degrees and rotates the pattern by that amount. If not provided, returns the current value. Defaults to 45.
+
+**cairo.fill([colors])**
+
+Requires an array of four colors. If no array is provided, returns the current values. Defaults to `["#2b8cbe","#a8ddb5","#7bccc4","#ccebc5"]`.
+
+**cairo.stroke(color)**
+
+If a color is provided, sets the stroke color of the pattern. If not provided, returns the current value. Defaults to black.
+
+**cairo.strokeWidth(width)**
+
+If a width is provided, sets the stroke width to the specified number, in pixels. If not provided, returns the current value. Defaults to 0.
+
+**cairo.use()**
+
+Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
+
+`rect.attr("fill",cairo.use());`
+
+
+
+
 
 
 
