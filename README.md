@@ -5,11 +5,13 @@ Patterning Utility for SVG &amp; D3
 
 ### ln.circle()
 
-Creates a new pattern of circles. 
+Creates a new pattern of circles:
+
+`var circle = ln.circle();`
 
 **circle.add()**
 
-Adds the circle pattern to the DOM. Invoked on creation and with `circle.use()`. Only need to expose this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+Adds the circle pattern to the DOM. Invoked on creation and with `circle.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
 
 **circle.angle(angle)**
 
@@ -49,4 +51,51 @@ Returns a string containing the location of the pattern. Can be used to set the 
 
 If a width is provided, sets the strokew width to the specified number, in pixels. If not provided, returns the current value. Defaults to 0.
 
+### ln.square()
+
+Creates a new pattern of squares:
+
+`var square = ln.square();`
+
+**square.add()**
+
+Adds the square pattern to the DOM. Invoked on creation and with `square.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+
+**square.angle(angle)**
+
+Takes an angle in degrees and rotates the pattern by that amount. If not provided, returns the current value. Defaults to 0.
+
+**square.background(color)**
+
+Takes a color (including "none") to set the background color of the pattern. If not provided, returns the current value. Defaults to "none".
+
+**square.fill(color)**
+
+Takes a color to set the fill of the pattern's shapes. If not provided returns the current value. Defaults to "steelblue".
+
+**square.hex(hexagonal)**
+
+If true, returns a hexagonal grid, if false, returns a square grid. If not provided, returns current value. Defaults to true.
+
+**square.length(length)**
+
+If length is provided, sets the edge length of squares in the pattern, in pixels. If not, returns the current edge length. Defaults to 10.
+
+**square.opacity(opacity)**
+
+Sets the opacity of the pattern shapes (not the background). 0 is completely transparent, 1 is completely opaque. If not provided, returns the current opacity value. Defaults to 1.
+
+**square.stroke(color)**
+
+If a color is provided, sets the stroke color of the pattern. If not provided, returns the current value. Defaults to black.
+
+**square.use()**
+
+Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
+
+`rect.attr("fill",square.use());`
+
+**square.strokeWidth(width)**
+
+If a width is provided, sets the strokew width to the specified number, in pixels. If not provided, returns the current value. Defaults to 0.
 
