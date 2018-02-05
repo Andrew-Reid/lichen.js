@@ -485,6 +485,53 @@ Returns a string containing the location of the pattern. Can be used to set the 
 `rect.attr("fill",octagon.use());`
 
 
+### ln.sine()
+
+Creates a new sine wave pattern
+
+`var sine = ln.sine();`
+
+
+**sine.add()**
+
+Adds the sine pattern to the DOM. Invoked on creation and with `sine.use()`. Only need to use this method is to update the pattern in place, (re)adding or updating the pattern in the DOM.
+
+**sine.amplitude(amplitude)**
+
+If amplitude is provided, sets the amplitude of the sine wave in pixels. If amplitude is not provided, returns the current amplitude. Defaults to 10.
+
+**sine.angle(angle)**
+
+Takes an angle in degrees and rotates the pattern by that amount. If not provided, returns the current value. Defaults to 0.
+
+**sine.period(period)**
+
+If period is provided sets the sine wave period in pixels. If not provided, returns the current period. Defaults to 100.
+
+**sine.samping(interval)**
+
+If interval is provided sets the x axis interval between each point in the pattern's line. Defaults to 1.
+
+**sine.spacing(spacing)**
+
+If spacing is provided, sets the vertical spacing between each wave's tile (not distance between peak to peak vertically). If not provided returns current value. Defaults to 4.
+
+**sine.stroke(color)**
+
+If a color is provided, sets the stroke color of the pattern. If not provided, returns the current value. Defaults to black.
+
+**sine.strokeWidth(width)**
+
+If a width is provided, sets the stroke width to the specified number, in pixels. If not provided, returns the current value. Defaults to 1.
+
+**sine.use()**
+
+Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
+
+`rect.attr("fill",sine.use());`
+
+
+
 
 
 
