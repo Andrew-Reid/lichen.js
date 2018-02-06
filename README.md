@@ -545,7 +545,41 @@ Returns a string containing the location of the pattern. Can be used to set the 
 
 ## Pattern Utilities
 
-**ln.manager(S *(optional)*)**
+### ln.circleSchemeCategory10(S *(optinal)*)
+
+Returns an array of 10 different circle patterns.
+
+If S is provided, sets the SVG where the patterns will be used (optional, if not provided, uses first SVG in DOM).
+
+### ln.circles(S *(optional)*)
+
+Used to create an array of customized circle patterns easily. Ideal for threshold scales:
+~~~
+var circles = ln.circles().spacings([2,4,8,16]);
+
+var scale = d3.scaleThreshold().domain([0,100,200]).range(circles);
+~~~
+
+The method that provides the largest array sets the size of the returned array. If some methods provide smaller arrays, then values will recycled. All methods that set pattern properties coerce values to arrays so the use of a single value is possible. For example, to set the fill of all circle patterns created by `ln.circles()`, we can use `ln.circles().fills("yellow");`
+
+**circles.background([colors])**
+
+If colors is provided, sets the spacings between circles for each pattern. If not provided, returns the current background colors array. Defaults to `["none"]`.
+
+**circles.fill([fills])**
+
+If fills is provided, sets the spacings between circles for each pattern. If not provided, returns the current fills array. Defaults to `["black"]`.
+
+**circles.radii([radii])**
+
+If radii is provided, sets the spacings between circles for each pattern. If not provided, returns the current spacing array. Defaults to `[1]`.
+
+**circles.spacings([spacings])**
+
+If spacings is provided, sets the spacings between circles for each pattern. If not provided, returns the current spacing array. Defaults to `[2,4,8,16]`.
+
+
+### ln.manager(S *(optional)*)**
 
 Creates a stripe manager. A stripe manager can be used to fill shapes based on a combination of single and multiple values. Single values will be colored with a single fill, multiple values will result in a stripe pattern fill.
 
@@ -577,7 +611,6 @@ If width is provided, sets the total width of a pattern tile. If a pattern resul
 
 Defaults to 12.
 
-## 
 
 
 
