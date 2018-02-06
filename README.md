@@ -1,7 +1,20 @@
 # lichen.js
 Patterning Utility for SVG &amp; D3
 
+
+
 ## Patterns
+
+All patterns take the form 
+
+`var pattern = ln.pattern(S,I)`
+
+Both parameters are optional.
+
+S is the SVG where the pattern will be used. If not provided, the first SVG in the DOM will be used,
+I is the id of the pattern that will be created. If not provided, an id will be selected.
+
+For the most part pattern methods are chainable similar to d3 methods.
 
 ### ln.circle()
 
@@ -529,6 +542,49 @@ If a width is provided, sets the stroke width to the specified number, in pixels
 Returns a string containing the location of the pattern. Can be used to set the fill of polygons, eg:
 
 `rect.attr("fill",sine.use());`
+
+## Pattern Utilities
+
+**ln.manager(S *(optional)*)**
+
+Creates a stripe manager. A stripe manager can be used to fill shapes based on a combination of single and multiple values. Single values will be colored with a single fill, multiple values will result in a stripe pattern fill.
+
+If S is provided, sets the SVG where the patterns will be used.
+
+**manager.angle(angle)**
+
+If angle is specified, returns stripe patterns with this angle (in degrees). If not specified, returns the current angle. Defaults to 45 degrees.
+
+**manager.datum(datum)**
+
+If datum is an array, creates and returns a stripe pattern url where each stripe corresponds to a value in the array. If the pattern already exists, returns that pattern's url.
+
+If datum is a single value, returns a single color that cooresponds to that value.
+
+**manager.fills([colors])**
+
+Takes an array of colors to be used as stripe colors. Colors are used in the order that they are needed. If no array is provided, returns the current color array. 
+
+Defaults to `d3.schemeCategory20`.
+
+**manager.values()**
+
+Returns key value pairs, useful for creating legends. Contains one pair for each unique value passed to it in `manager.datum()`
+
+**manager.width(width)**
+
+If width is provided, sets the total width of a pattern tile. If a pattern results in two stripes, each will be half this width. If no width is provided, returns the current width.
+
+Defaults to 12.
+
+## 
+
+
+
+
+
+
+
 
 
 
