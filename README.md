@@ -584,7 +584,7 @@ If radii is provided, sets the spacings between circles for each pattern. If not
 
 **circles.spacings([spacings])**
 
-If spacings is provided, sets the spacings between circles for each pattern. If not provided, returns the current spacing array. Defaults to `[2,4,8,16]`.
+If spacings is provided, sets the spacings between circles for each pattern. If not provided, returns the current spacing array. Defaults to `[16,8,4,2]`.
 
 
 ### ln.manager(S *(optional)*)**
