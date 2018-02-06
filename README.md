@@ -553,7 +553,7 @@ Returns a string containing the location of the pattern. Can be used to set the 
 
 ## Pattern Utilities
 
-### ln.circleSchemeCategory10(S *(optinal)*)
+### ln.circleSchemeCategory10(S *(optional)*)
 
 Returns an array of 10 different circle patterns.
 
