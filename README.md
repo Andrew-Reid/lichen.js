@@ -5,10 +5,10 @@ Provides easy to use patterns for use with D3, or for SVG in general (but is dep
 
 Take a look at the demos:
 
-* Pattern Groups: Pattern Explorer
-* Stripe Manager: Official Languages in the Americas
-* Choropleth + Texture: Prescriptions and Opioid Overdoses in the US
-* Nested Patterns: Patterns in patterns.
+* [Pattern Groups: Pattern Explorer](https://bl.ocks.org/andrew-reid/1d835f33b0f0d1a730f84ffdee8f15c5)
+* [Stripe Manager: Official Languages in the Americas](https://bl.ocks.org/Andrew-Reid/24d275006f122a2fe888fbaf2d3ec53b)
+* [Choropleth + Texture: Prescriptions and Opioid Overdoses in the US](https://bl.ocks.org/andrew-reid/c705aba23d4e8f5f1272485abe58c353)
+
 
 
 ## Patterns
