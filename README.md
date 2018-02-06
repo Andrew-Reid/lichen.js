@@ -453,6 +453,10 @@ Takes an angle in degrees and rotates the pattern by that amount. If not provide
 
 Requires an array of four colors. If no array is provided, returns the current values. Defaults to `["#2b8cbe","#a8ddb5","#7bccc4","#ccebc5"]`.
 
+**cairo.length(length)**
+
+If length is provided sets the size of the pattern. If no length is provided, returns the current length.
+
 **cairo.stroke(color)**
 
 If a color is provided, sets the stroke color of the pattern. If not provided, returns the current value. Defaults to black.
