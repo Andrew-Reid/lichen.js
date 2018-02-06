@@ -612,9 +612,26 @@ If width is provided, sets the total width of a pattern tile. If a pattern resul
 Defaults to 12.
 
 
+## Built In Symbols
+
+In addition to easily incorporating d3 symbols, `ln.symbol()` has a couple variations that allow for use of built in relatively common symbols that might be useful in certain circumstances. These symbols are:
 
 
+**ln.danger()**
 
+A skull and crossbones pattern, inherits all methods of ln.symbol().
+
+**ln.fire()**
+
+A flame pattern, because why not? Inherits all methods of ln.symbol().
+
+**ln.fish()**
+
+A fish pattern, inherits all methods of ln.symbol().
+
+**ln.wetland()**
+
+A wetland/swamp pattern, inherits all methods of ln.symbol().
 
 
 
