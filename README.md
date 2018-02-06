@@ -1,6 +1,14 @@
 # lichen.js
-Patterning Utility for SVG &amp; D3
+A Patterning Utility for SVG &amp; D3
 
+Provides easy to use patterns for use with D3, or for SVG in general (but is dependent on D3).
+
+Take a look at the demos:
+
+* Pattern Groups: Pattern Explorer
+* Stripe Manager: Official Languages in the Americas
+* Choropleth + Texture: Prescriptions and Opioid Overdoses in the US
+* Nested Patterns: Patterns in patterns.
 
 
 ## Patterns
