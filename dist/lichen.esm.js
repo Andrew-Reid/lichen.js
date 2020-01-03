@@ -1,7 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 function widthHeight(e,w,h) {
     e.attr("width",w);
 	e.attr("height",h);
@@ -980,21 +976,4 @@ function ptDanger(S,I) {
 	return danger;
 }
 
-exports.ptCairo = ptCairo;
-exports.ptChecker = ptChecker;
-exports.ptCircle = ptCircle;
-exports.ptCircles = ptCircles;
-exports.ptDanger = ptDanger;
-exports.ptFire = ptFire;
-exports.ptFish = ptFish;
-exports.ptHexagon = ptHexagon;
-exports.ptLetter = ptLetter;
-exports.ptManager = ptManager;
-exports.ptOctagon = ptOctagon;
-exports.ptPlaid = ptPlaid;
-exports.ptSchemeCategory10 = ptSchemeCategory10;
-exports.ptSine = ptSine;
-exports.ptSquare = ptSquare;
-exports.ptStripe = ptStripe$1;
-exports.ptSymbol = ptSymbol;
-exports.ptWetland = ptWetland;
+export { ptCairo, ptChecker, ptCircle, ptCircles, ptDanger, ptFire, ptFish, ptHexagon, ptLetter, ptManager, ptOctagon, ptPlaid, ptSchemeCategory10, ptSine, ptSquare, ptStripe$1 as ptStripe, ptSymbol, ptWetland };
