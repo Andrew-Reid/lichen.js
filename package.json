@@ -1,0 +1,22 @@
+{
+  "name": "rollup-starter-lib",
+  "version": "1.0.0",
+  "main": "dist/lichen.cjs.js",
+  "module": "dist/lichen.esm.js",
+  "browser": "dist/lichen.js",
+  "dependencies": {
+   
+  },
+  "devDependencies": {
+    "rollup": "^1.16.2",
+    "rollup-plugin-commonjs": "^9.2.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
